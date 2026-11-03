@@ -1,0 +1,136 @@
+export interface AgendaItem {
+  id: string;
+  time: string;
+  title: string;
+  category: 'Keynote' | 'Architecture' | 'AI & ML' | 'DevOps' | 'Security' | 'Community';
+  speaker: string;
+  role: string;
+  location: string;
+  description: string;
+  branchColor?: string;
+  status: 'SACRED_FLOW' | 'BRANCH_ACTIVE' | 'PRUNED';
+  badge: string;
+}
+
+export const AGENDA_ITEMS: AgendaItem[] = [
+  {
+    id: 'TVA-EVT-01',
+    time: '08:30 AM – 09:30 AM',
+    title: 'Temporal Check-In & Variant Identification',
+    category: 'Community',
+    speaker: 'TVA Reception Bureau',
+    role: 'Welcome Protocol Team',
+    location: 'Sacred Atrium • Level 1',
+    description: 'Variants report for biometric temporal clearance, badge issuance, exclusive AWS Pune kit distribution, and welcome breakfast.',
+    status: 'SACRED_FLOW',
+    badge: 'CLEARANCE LEVEL 1',
+  },
+  {
+    id: 'TVA-EVT-02',
+    time: '09:30 AM – 10:15 AM',
+    title: 'The Sacred Opening: For All Time. Always.',
+    category: 'Keynote',
+    speaker: 'AWS Community Leaders & Student Ambassadors',
+    role: 'Temporal Architects',
+    location: 'Central Time Theater (Auditorium A)',
+    description: 'Official opening ceremony unveiling AWS Student Community Day Pune. Setting the multiversal vision of cloud computing and developer ecosystems in 2026.',
+    status: 'SACRED_FLOW',
+    badge: 'ALL TIMELINES CONVERGE',
+  },
+  {
+    id: 'TVA-EVT-03',
+    time: '10:15 AM – 11:15 AM',
+    title: 'AWS Keynote: Architecting Resilient Cloud Multiverses',
+    category: 'Keynote',
+    speaker: 'Senior AWS Technical Leader',
+    role: 'Principal Solutions Architect, AWS India',
+    location: 'Central Time Theater (Auditorium A)',
+    description: 'Deep dive into next-generation global cloud infrastructure, serverless scale, and how modern builders master distributed systems across regions.',
+    status: 'SACRED_FLOW',
+    badge: 'CRITICAL DISPATCH',
+  },
+  {
+    id: 'TVA-EVT-04',
+    time: '11:30 AM – 12:30 PM',
+    title: 'Generative AI on AWS: From Amazon Bedrock to Autonomous Agents',
+    category: 'AI & ML',
+    speaker: 'GenAI Variant Specialists',
+    role: 'AI Research & Engineering Panel',
+    location: 'Track Alpha • Neural Chamber',
+    description: 'Building production-grade LLM applications, RAG pipelines with Amazon OpenSearch Serverless, and fine-tuning models on AWS Trainium.',
+    status: 'BRANCH_ACTIVE',
+    badge: 'NEXUS EVENT DETECTED',
+  },
+  {
+    id: 'TVA-EVT-05',
+    time: '11:30 AM – 12:30 PM',
+    title: 'Zero-Trust Cloud Governance & DevSecOps Automated Guardrails',
+    category: 'Security',
+    speaker: 'Temporal Security Division',
+    role: 'Chief Security Architect',
+    location: 'Track Beta • Pruning Vault',
+    description: 'How to safeguard cloud environments against unauthorized timeline tampering using AWS IAM Identity Center, GuardDuty, and automated SCPs.',
+    status: 'SACRED_FLOW',
+    badge: 'SECURITY DIRECTIVE',
+  },
+  {
+    id: 'TVA-EVT-06',
+    time: '12:30 PM – 01:30 PM',
+    title: 'Temporal Sustenance & Multiverse Community Networking',
+    category: 'Community',
+    speaker: 'All Variants & Mentors',
+    role: 'Community Mixer',
+    location: 'TVA Cafeteria & Exhibition Commons',
+    description: 'Buffet lunch, networking with industry veterans, community booth visits, interactive demos, and sponsor challenge stations.',
+    status: 'SACRED_FLOW',
+    badge: 'COLLABORATIVE TIME',
+  },
+  {
+    id: 'TVA-EVT-07',
+    time: '01:30 PM – 03:00 PM',
+    title: 'Hands-On Labs: Serverless Microservices at Infinite Scale',
+    category: 'Architecture',
+    speaker: 'AWS Hero & Community Builders',
+    role: 'Cloud Engineering Leads',
+    location: 'Lab Room 01 • Time Engine Facility',
+    description: 'Step-by-step interactive workshop: deploying event-driven architectures with AWS Lambda, EventBridge, Step Functions, and DynamoDB.',
+    status: 'BRANCH_ACTIVE',
+    badge: 'HANDS-ON PROTOCOL',
+  },
+  {
+    id: 'TVA-EVT-08',
+    time: '01:30 PM – 03:00 PM',
+    title: 'Kubernetes on AWS (EKS): Multi-Cluster Temporal Orchestration',
+    category: 'DevOps',
+    speaker: 'DevOps & SRE Variants',
+    role: 'Staff Infrastructure Engineer',
+    location: 'Lab Room 02 • Control Deck',
+    description: 'Automating multi-region container deployments with Amazon EKS, Karpenter auto-scaling, GitOps with ArgoCD, and Prometheus telemetry.',
+    status: 'BRANCH_ACTIVE',
+    badge: 'SYSTEM STABILIZER',
+  },
+  {
+    id: 'TVA-EVT-09',
+    time: '03:15 PM – 04:15 PM',
+    title: 'Panel: The Future Cloud Engineer — Navigating AI & Cloud Careers',
+    category: 'Community',
+    speaker: 'Industry Leaders, AWS Heroes & Student Founders',
+    role: 'High Council of Cloud Builders',
+    location: 'Central Time Theater (Auditorium A)',
+    description: 'Candid conversation on cloud career trajectories, open source contributions, AWS certifications vs real-world projects, and winning hackathons.',
+    status: 'SACRED_FLOW',
+    badge: 'CAREER TIMELINE ACCELERATOR',
+  },
+  {
+    id: 'TVA-EVT-10',
+    time: '04:15 PM – 05:00 PM',
+    title: 'The Great Timeline Closing, Awards & Swag Protocol',
+    category: 'Community',
+    speaker: 'Organizing Committee',
+    role: 'TVA High Command',
+    location: 'Central Time Theater (Auditorium A)',
+    description: 'Hackathon & quiz recognitions, exclusive AWS credits distribution, community awards, and group photograph of all registered variants.',
+    status: 'SACRED_FLOW',
+    badge: 'SACRED TIMELINE PRESERVED',
+  },
+];

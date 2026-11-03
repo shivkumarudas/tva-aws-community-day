@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --tva-orange: #F07824;
+    --tva-orange-glow: #FFA04D;
+    --tva-gold: #F6C453;
+    --tva-olive: #42452C;
+    --tva-cream: #E8DFCA;
+    --tva-brown: #29251F;
+    --tva-black: #100F0C;
+    --tva-green: #10B981;
+  }
+
+  body {
+    background-color: #100F0C;
+    color: #E8DFCA;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* TVA Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #14120E;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #42452C;
+    border: 1px solid #F07824;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F07824;
+  }
+}
+
+/* TVA Retro CRT Scanlines & Screen Texture */
+.tva-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.3) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Dossier border effect */
+.dossier-card {
+  position: relative;
+  background: #181512;
+  border: 1px solid rgba(240, 120, 36, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dossier-card:hover {
+  border-color: rgba(240, 120, 36, 0.75);
+  box-shadow: 0 0 30px -5px rgba(240, 120, 36, 0.3);
+}
+
+.dossier-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #F07824;
+  border-left: 2px solid #F07824;
+  pointer-events: none;
+}
+
+.dossier-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #F07824;
+  border-right: 2px solid #F07824;
+  pointer-events: none;
+}
+
+/* TVA Rubber Stamps */
+.stamp-classified {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  transform: rotate(-6deg);
+  border: 3px solid #DC2626;
+  color: #DC2626;
+  padding: 4px 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0.9;
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.25);
+  mask-image: radial-gradient(circle, black 70%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.stamp-approved {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.18em;
+  transform: rotate(4deg);
+  border: 3px solid #10B981;
+  color: #10B981;
+  padding: 4px 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0.92;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.stamp-restricted {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.18em;
+  transform: rotate(-4deg);
+  border: 3px solid #EF4444;
+  color: #EF4444;
+  padding: 4px 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+/* Glowing text effects */
+.text-tva-glow {
+  text-shadow: 0 0 12px rgba(240, 120, 36, 0.6), 0 0 28px rgba(246, 196, 83, 0.35);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 14px rgba(246, 196, 83, 0.8), 0 0 35px rgba(240, 120, 36, 0.45);
+}
+
+/* Scanning line laser animation */
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+.animate-laser-scan {
+  animation: laserScan 2.4s ease-in-out infinite alternate;
+}
+
+/* TVA Terminal Grid pattern */
+.bg-tva-terminal {
+  background-image: 
+    linear-gradient(to right, rgba(240, 120, 36, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(240, 120, 36, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
